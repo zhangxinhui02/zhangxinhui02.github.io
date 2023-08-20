@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Redirect - zhangxinhui02</title>
+  <title>Redirecting - zhangxinhui02</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -33,48 +33,40 @@
     }
 
     #redirect-info {
-      font-size: 14px;
-      color: #666;
-      margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+    }
+
+    #domain-info {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
     }
   </style>
 </head>
 <body>
   <div id="container">
-    <div id="welcome-message">Welcome to <span id="client-host"></span></div>
-    <div id="message">Redirecting in 5 seconds...</div>
-    <div id="redirect-info"></div>
+    <div id="welcome-message">Welcome to zhangxinhui02's site!</div>
+    <br>
+    <div id="message">Redirecting to main site in 10 seconds...</div>
+    <div id="redirect-info">To target: <a href="https://www.mikumikumi.xyz">https://www.mikumikumi.xyz</a></div>
+    <br>
+    <hr>
+    <div id="domain-info">If you are interested in domain "miku.team", please visit <a href="https://mikuteam.mikumikumi.xyz">here</a>.</div>
   </div>
   <script>
-    // Get the current hostname of the webpage
-    var currentHost = window.location.hostname;
-
-    // Display the client's visited hostname
-    var clientHostElement = document.getElementById('client-host');
-    clientHostElement.textContent = currentHost;
-
-    // Display the redirecting message
     var messageElement = document.getElementById('message');
     var redirectInfoElement = document.getElementById('redirect-info');
-
-    // Redirect logic based on the hostname
-    if (currentHost === 'miku.team' || currentHost === 'www.miku.team') {
-      var targetURL = 'https://mikuteam.mikumikumi.xyz';
-      redirectInfoElement.innerHTML = 'Redirecting to target: <a href="' + targetURL + '">' + targetURL + '</a>';
-    } else {
-      var targetURL = 'https://www.mikumikumi.xyz';
-      redirectInfoElement.innerHTML = 'Redirecting to target: <a href="' + targetURL + '">' + targetURL + '</a>';
-    }
-
     // 5-second countdown
-    var countdown = 5;
+    var countdown = 10;
     var countdownInterval = setInterval(function() {
-      messageElement.innerHTML = 'Redirecting in ' + countdown + ' seconds...';
+      messageElement.innerHTML = 'Redirecting to main site in ' + countdown + ' seconds...';
       countdown--;
 
       if (countdown < 0) {
         clearInterval(countdownInterval);
-        window.location.href = targetURL;
+        window.location.href = 'https://www.mikumikumi.xyz';
       }
     }, 1000);
   </script>
